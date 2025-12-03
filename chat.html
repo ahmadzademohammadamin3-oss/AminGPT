@@ -90,7 +90,7 @@ async function send() {
   document.getElementById("chatBox").innerHTML +=
     `<div class="msg me">${text}</div>`;
 
-  const res = await fetch("https://YOUR_HF_SPACE_URL/run/predict", {
+  const res = await fetch("https://ahmadzademohammadamin3-oss.github.io/AminGPT/", {
     method:"POST",
     headers: {"Content-Type":"application/json"},
     body:JSON.stringify({"data":[text]})
