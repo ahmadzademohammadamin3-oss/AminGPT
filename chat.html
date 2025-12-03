@@ -3,27 +3,20 @@ async function send() {
   const text = input.value;
   if (!text) return;
 
-  // اضافه کردن پیام کاربر
   const chatBox = document.getElementById("chatBox");
   chatBox.innerHTML += `<div class="msg me">${text}</div>`;
+  input.value = "";
 
-  input.value = "";  // پاک کردن باکس ورودی
-
-  // ارسال پیام به Space
   try {
-    const res = await fetch("https://ahmadzademohammadamin3-oss.github.io/AminGPT/", {
+    const res = await fetch("https://YOUR_HF_SPACE_URL/run/predict", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({"data":[text]})
     });
-
     const data = await res.json();
     const reply = data.data[0];
 
-    // اضافه کردن پاسخ فقط **یک بار**
     chatBox.innerHTML += `<div class="msg bot">${reply}</div>`;
-
-    // Scroll به پایین برای نمایش آخرین پیام
     chatBox.scrollTop = chatBox.scrollHeight;
 
   } catch (err) {
