@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>AminGPT - ورود</title>
+<style>
+body {
+  margin:0;
+  font-family: "IRANSans", sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a40);
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.box {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  padding:40px;
+  width:320px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.box h2 {
+  margin-bottom:25px;
+  color:white;
+}
+
+.box input {
+  width:90%;
+  margin:10px 0;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  outline:none;
+}
+
+.box button {
+  width:100%;
+  padding:12px;
+  border:none;
+  margin-top:15px;
+  border-radius:10px;
+  background:#6a5acd;
+  color:white;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.box button:hover {
+  background:#7a6aed;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>ورود به AminGPT</h2>
+  <input id="user" placeholder="نام کاربری">
+  <input id="pass" placeholder="رمز عبور" type="password">
+  <button onclick="login()">ورود</button>
+</div>
+
+<script>
+function login() {
+  let u = document.getElementById("user").value;
+  let p = document.getElementById("pass").value;
+
+  // نام کاربری و رمز دلخواه – می‌تونه قابل تغییر باشه
+  if (u === "amin" && p === "1234") {
+    window.location.href = "chat.html";
+  } else {
+    alert("❌ نام کاربری یا رمز اشتباه است");
+  }
+}
+</script>
+
+</body>
+</html>
