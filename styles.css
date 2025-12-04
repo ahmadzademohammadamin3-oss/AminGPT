@@ -1,59 +1,81 @@
-body {
-  background: #0e0e0e;
-  color: #fff;
-  font-family: sans-serif;
-  margin: 0;
+body { 
+  background: #0e0e0e; 
+  color: #fff; 
+  font-family: 'Vazir', sans-serif; 
+  margin: 0; 
 }
 
-.login-box {
-  width: 300px;
-  margin: 120px auto;
-  padding: 20px;
-  background: #1b1b1b;
-  border-radius: 12px;
-  text-align: center;
+.login-box { 
+  width: 300px; 
+  margin: 120px auto; 
+  padding: 20px; 
+  background: #1b1b1b; 
+  border-radius: 12px; 
+  text-align: center; 
+  box-shadow: 0 0 10px #000; 
 }
 
-.chat-box {
-  height: 80vh;
-  overflow-y: auto;
-  padding: 10px;
-}
 .logo {
   display: block;
   margin: 0 auto 15px auto;
-  width: 120px; /* اندازه دلخواه */
+  width: 120px;
   height: auto;
-  border-radius: 12px; /* اگر بخوای گوشه‌ها گرد باشد */
+  border-radius: 12px;
 }
 
-
-.bubble {
-  padding: 10px;
-  background: #272727;
-  border-radius: 10px;
-  margin: 5px 0;
+input { 
+  width: 100%; 
+  padding: 10px; 
+  margin: 8px 0; 
+  border-radius: 8px; 
+  border: none; 
+  box-sizing: border-box;
 }
 
-.input-box {
-  display: flex;
-  padding: 10px;
+button { 
+  width: 100%; 
+  padding: 10px; 
+  background: #4f8cff; 
+  color: white; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer; 
+}
+
+button:hover { 
+  background: #3570d1; 
+}
+
+.chat-box { 
+  height: 70vh; 
+  overflow-y: auto; 
+  padding: 10px; 
   background: #1b1b1b;
+  margin: 10px auto;
+  width: 90%;
+  border-radius: 10px;
 }
 
-input {
-  flex: 1;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
+.bubble { 
+  padding: 10px; 
+  background: #272727; 
+  border-radius: 10px; 
+  margin: 5px 0; 
 }
 
-button {
-  padding: 10px;
-  background: #4f8cff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  margin-left: 8px;
-  cursor: pointer;
+.input-box { 
+  display: flex; 
+  padding: 10px; 
+  background: #1b1b1b; 
+  width: 90%;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+}
+
+.input-box input { 
+  flex: 1; 
+}
+
+.input-box button { 
+  margin-left: 8px; 
 }
