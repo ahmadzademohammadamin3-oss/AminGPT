@@ -21,7 +21,7 @@ app.post("/chat", async (req, res) => {
       body: JSON.stringify({
         model: "deepseek-chat",
         messages: [
-          { role: "system", content: "تو امین هستی و دوستانه جواب می‌دهی" },
+          { role: "system", content: "تو امین هستی و باید دوستانه و دقیق جواب بدهی." },
           { role: "user", content: userMsg }
         ]
       })
@@ -36,5 +36,5 @@ app.post("/chat", async (req, res) => {
 });
 
 app.listen(process.env.PORT || 3000, () => {
-  console.log("Amin GPT connected to DeepSeek!");
+  console.log("AminGPT connected to DeepSeek ✔");
 });
