@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <title>ورود به AminGPT</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<title>AminGPT - ورود</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="login-box">
-    <h2>ورود</h2>
-    <input id="user" placeholder="نام کاربری">
-    <input id="pass" type="password" placeholder="رمز عبور">
-    <button onclick="login()">ورود</button>
-    <p id="msg"></p>
-  </div>
 <div class="login-box">
   <img src="logo.png" alt="AminGPT" class="logo">
-  <h2>ورود</h2>
+  <h2>ورود به AminGPT</h2>
   <input id="user" placeholder="نام کاربری">
   <input id="pass" type="password" placeholder="رمز عبور">
   <button onclick="login()">ورود</button>
@@ -29,8 +22,8 @@ const USERS = [
 ];
 
 function login() {
-  const u = user.value;
-  const p = pass.value;
+  const u = document.getElementById("user").value;
+  const p = document.getElementById("pass").value;
 
   const found = USERS.find(x => x.username === u && x.password === p);
 
@@ -38,7 +31,7 @@ function login() {
     localStorage.setItem("username", u);
     window.location.href = "chat.html";
   } else {
-    msg.innerText = "نام کاربری یا رمز اشتباه است";
+    document.getElementById("msg").innerText = "نام کاربری یا رمز اشتباه است";
   }
 }
 </script>
