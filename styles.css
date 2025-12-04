@@ -3,47 +3,7 @@ body {
   color: #fff; 
   font-family: 'Vazir', sans-serif; 
   margin: 0; 
-}
-
-.login-box { 
-  width: 300px; 
-  margin: 120px auto; 
-  padding: 20px; 
-  background: #1b1b1b; 
-  border-radius: 12px; 
-  text-align: center; 
-  box-shadow: 0 0 10px #000; 
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 15px auto;
-  width: 120px;
-  height: auto;
-  border-radius: 12px;
-}
-
-input { 
-  width: 100%; 
-  padding: 10px; 
-  margin: 8px 0; 
-  border-radius: 8px; 
-  border: none; 
   box-sizing: border-box;
-}
-
-button { 
-  width: 100%; 
-  padding: 10px; 
-  background: #4f8cff; 
-  color: white; 
-  border: none; 
-  border-radius: 8px; 
-  cursor: pointer; 
-}
-
-button:hover { 
-  background: #3570d1; 
 }
 
 .chat-box { 
@@ -53,6 +13,7 @@ button:hover {
   background: #1b1b1b;
   margin: 10px auto;
   width: 90%;
+  max-width: 800px; /* اندازه بزرگترین عرض */
   border-radius: 10px;
 }
 
@@ -61,6 +22,7 @@ button:hover {
   background: #272727; 
   border-radius: 10px; 
   margin: 5px 0; 
+  word-wrap: break-word; /* متن طولانی را می‌شکند */
 }
 
 .input-box { 
@@ -68,14 +30,30 @@ button:hover {
   padding: 10px; 
   background: #1b1b1b; 
   width: 90%;
+  max-width: 800px;
   margin: 0 auto 20px auto;
   border-radius: 10px;
 }
 
 .input-box input { 
   flex: 1; 
+  padding: 10px;
+  border-radius: 8px; 
+  border: none;
+  font-size: 16px;
 }
 
 .input-box button { 
   margin-left: 8px; 
+  padding: 10px 16px;
+  background: #4f8cff; 
+  color: white; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.input-box button:hover { 
+  background: #3570d1; 
 }
